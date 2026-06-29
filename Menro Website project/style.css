@@ -153,8 +153,6 @@ margin-left: auto;
   margin-left: auto;
 }
 
-
-
 .header__nav a{
   color: #DFE0A3;
   text-decoration: none;
@@ -171,8 +169,6 @@ margin-left: auto;
   float: left;
   position: relative;
 }
-
-
 
 .dropdown{
   padding-top: 1rem;
@@ -212,3 +208,20 @@ margin-left: auto;
 .dropdown:hover .content{
   display: block;
 }
+
+
+.footer .footer__content{
+  background: #DFE0A3;
+  bottom: 0;
+
+}
+
+.footer .footer__content p{
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 2.5rem;
+}
+
+
+ 
