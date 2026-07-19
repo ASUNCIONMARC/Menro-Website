@@ -113,16 +113,28 @@ img {
 }
 
 
+html, body{
+  height: 100%;
+  margin: 0;
+  background: #DFE0A3;
+}
 
+ body.menu-open::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 998;
+}
 
 .header{
   background: #7CAA3C;
   display: flex;
   flex-direction: row;
   width: 100%;
-
+  position: relative;
+  z-index: 1000;
 }
-
 
 .header .container .header__wrapper .branding img{
   background-color: transparent;
@@ -131,18 +143,20 @@ img {
 }
 
 .header .container .header__wrapper .header__nav ul{
-list-style-type: none;
-padding: 0px;
-margin: 0px;
-overflow: hidden;
-padding-top: 2.5rem;
-margin-left: auto;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  padding-top: 2.5rem;
+  margin-left: auto;
 }
 
 .header .header__wrapper{
   display: flex;
   flex-direction: row;
   width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .container{
@@ -152,8 +166,6 @@ margin-left: auto;
 .header__nav{
   margin-left: auto;
 }
-
-
 
 .header__nav a{
   color: #DFE0A3;
@@ -171,8 +183,6 @@ margin-left: auto;
   float: left;
   position: relative;
 }
-
-
 
 .dropdown{
   padding-top: 1rem;
@@ -212,3 +222,1037 @@ margin-left: auto;
 .dropdown:hover .content{
   display: block;
 }
+
+.burger{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  margin-right: 1rem;
+}
+
+.burger__line{
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger.is-active .burger__line:nth-child(1){
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.burger.is-active .burger__line:nth-child(2){
+  opacity: 0;
+}
+
+.burger.is-active .burger__line:nth-child(3){
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+@media (max-width: 900px){
+  .burger{
+    display: flex;
+  }
+
+  .branding{
+    position: relative;
+    z-index: 1001;
+  }
+
+  .branding img{
+    width: 60px;
+    height: 60px;
+  }
+
+  .header__wrapper{
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__nav{
+    position: fixed;
+     top: 0;
+  left: 0;
+  width: 100%;
+    background: #4E7B34;
+    max-height: none;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 100px;
+    padding-bottom: 2rem;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+
+  .header__nav.is-open{
+    transform: translateY(0);
+  }
+
+  .header__nav ul{
+    flex-direction: column;
+    padding: 0 1.5rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .header__nav ul li{
+    width: 100%;
+    padding: 0.75rem 0;
+    text-align: center;
+  }
+
+  .dropdown{
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown button{
+    display: none !important; /* FIXED: removed the invalid semicolon before !important */
+  }
+
+  .dropdown .content{
+    display: block;
+    position: static;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .dropdown .content a{
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+  .branding{
+    position:relative;
+    z-index: 1001;
+  }
+
+  .branding img{
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.LatestCollection__Section{
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
+  padding: 4rem 6rem; /* NEW: since body no longer has a dedicated content wrapper with padding */
+  box-sizing: border-box;
+}
+
+.LatestCollection__LogoWrap{
+  display: flex;
+  justify-content: center;
+}
+
+.LogoHover{
+  position: relative;
+  width: 280px; /* CHANGED: was 220px — bigger logo */
+  height: 280px;
+}
+
+.LogoHover img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.LogoHover__default{
+  opacity: 1;
+}
+
+.LogoHover__alt{
+  opacity: 0;
+}
+
+.LogoHover:hover .LogoHover__default{
+  opacity: 0;
+}
+
+.LogoHover:hover .LogoHover__alt{
+  opacity: 1;
+}
+
+.LatestCollection__Box{
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem; /* CHANGED: was 1.5rem */
+  height: 420px; /* CHANGED: was 320px — taller to match bigger text */
+  display: flex;
+  flex-direction: column;
+  background: #DFE0A3;
+}
+
+.LatestCollection__Header{
+  text-align: center;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e5dd;
+}
+
+.LatestCollection__Header h2{
+  margin: 0;
+  font-size: 1.8rem; /* CHANGED: was 1.3rem */
+  color: #2b2b2b;
+}
+
+.LatestCollection__Header p{
+  margin: 6px 0 0;
+  font-size: 1.05rem; /* CHANGED: was 0.9rem */
+  color: #777;
+}
+
+.LatestCollection__TickerViewport{
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.LatestCollection__Ticker{
+  position: absolute;
+  width: 100%;
+}
+
+.LatestCollection__Row{
+  padding: 18px 12px; /* CHANGED: was 12px 8px */
+  border-bottom: 1px solid #e5e5dd;
+  font-size: 1.3rem; /* CHANGED: was 0.95rem — much bigger */
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.LatestCollection__Row span{
+  white-space: nowrap;
+}
+
+@media (max-width: 900px){
+  .LatestCollection__Section{
+    grid-template-columns: 1fr;
+  }
+}
+
+.CollectorMonth__Section{
+  display: grid;
+  grid-template-columns: 1fr 1.6fr; /* CHANGED: was 'auto 1fr' — now matches LatestCollection's columns */
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 6rem 4rem;
+  box-sizing: border-box;
+  border-top: 2px solid #4E7B34;
+}
+
+.CollectorMonth__PhotoWrap{
+  display: flex; /* NEW wrapper, same pattern as .LatestCollection__LogoWrap */
+  justify-content: center;
+}
+
+.CollectorMonth__Photo{
+  width: 280px;
+  height: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #eee;
+  flex-shrink: 0;
+  margin-left: 0; /* CHANGED: removed the manual nudge, centering handles positioning now */
+}
+
+.CollectorMonth__Photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  
+}
+
+.CollectorMonth__Photo img.is-fading{
+  opacity: 0;
+}
+
+.CollectorMonth__Details{
+  justify-self: end; /* CHANGED: pushes the block to the right side of its grid column */
+  padding-left: 0; /* removed the old left padding, no longer needed */
+  padding-right: 35rem; /* NEW: keeps it from touching the very edge */
+  text-align: left; /* text still reads left-to-right within the block */
+}
+
+.CollectorMonth__Details h2{
+  font-size: 3.5rem; /* was 3rem — bigger */
+  font-weight: 800;
+  color: #4E7B34;
+  margin: 0 0 2.5rem;
+}
+
+.CollectorMonth__Info{
+  transition: opacity 0.6s ease;
+}
+
+.CollectorMonth__Info.is-fading{
+  opacity: 0;
+}
+
+.CollectorMonth__Month{
+  font-size: 2.2rem; /* was 1.8rem */
+  font-weight: 700;
+  color: #2b2b2b;
+  margin: 0 0 1.25rem;
+}
+
+.CollectorMonth__Name{
+  font-size: 2rem; /* was 1.6rem */
+  font-weight: 700;
+  color: #2b2b2b;
+  margin: 0 0 1rem;
+}
+
+.CollectorMonth__Amount{
+  font-size: 1.8rem; /* was 1.4rem */
+  font-weight: 700;
+  color: #2b2b2b;
+  margin: 0;
+}
+@media (max-width: 900px){
+  .LatestCollection__Section{
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+  }
+
+  .CollectorMonth__Section{
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem 3rem;
+    margin: 0 1.5rem;
+  }
+}
+
+.RecentActivity__Section{
+  width: 100%;
+  padding: 3rem 6rem 4rem;
+  box-sizing: border-box;
+  border-top: 2px solid #4E7B34;
+}
+
+.RecentActivity__Section h1{
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #4E7B34;
+  margin: 0 0 2.5rem;
+}
+
+.RecentActivity__Row{
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem; /* CHANGED: was 3rem — tightens the gap between image and text */
+  align-items: center;
+  max-width: 900px; /* NEW: caps the row so caption doesn't stretch across the full page width */
+  margin-bottom: 3rem;
+  margin-left:30rem;
+}
+
+.RecentActivity__Row:nth-child(even){
+  grid-template-columns: 1fr 280px;
+  margin-left: auto; /* NEW: pushes the even row to the right side, mirroring the odd row's left position */
+  margin-right: 30rem
+}
+
+.RecentActivity__Row:nth-child(even) .RecentActivity__Carousel{
+  order: 2;
+}
+
+.RecentActivity__Row:nth-child(even) .RecentActivity__Caption{
+  order: 1;
+}
+
+.RecentActivity__Carousel{
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #eee;
+  flex-shrink: 0;
+}
+
+.RecentActivity__Carousel img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.RecentActivity__Carousel img.is-active{
+  opacity: 1;
+}
+
+.RecentActivity__Caption{
+  font-size: 2rem; /* CHANGED: was 1.3rem — bigger since there's more room now */
+  line-height: 1.7;
+  color: #2b2b2b;
+}
+
+@media (max-width: 900px){
+  .RecentActivity__Row,
+  .RecentActivity__Row:nth-child(even){
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .RecentActivity__Row:nth-child(even) .RecentActivity__Carousel,
+  .RecentActivity__Row:nth-child(even) .RecentActivity__Caption{
+    order: unset;
+  }
+}
+
+.MenroPolicies__Section{
+  width: 100%;
+  padding: 3rem 6rem 4rem;
+  box-sizing: border-box;
+  border-top: 2px solid #4E7B34;
+}
+
+.MenroPolicies__Section h1{
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #4E7B34;
+  margin: 0 0 2.5rem;
+}
+
+.MenroPolicies__Grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.MenroPolicies__Item img{
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e5dd;
+}
+
+@media (max-width: 900px){
+  .MenroPolicies__Grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+.LegalDocuments__Content{
+  background: #DFE0A3;
+  min-height: 100vh;
+  padding: 4rem 6rem;
+  box-sizing: border-box;
+}
+
+.LegalDocuments__Content h1{
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #4E7B34;
+  margin: 0 0 2rem;
+  text-transform: uppercase;
+}
+
+.LegalDocs__Accordion{
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* NEW: space between each bar */
+}
+
+.LegalDocs__Item{
+  background: #fff; /* moved here from .LegalDocs__Accordion since items are now separate cards */
+  border-radius: 10px; /* NEW: each bar is now its own rounded card */
+  overflow: hidden;
+  border: 1px solid #e5e5dd; /* replaces the old border-bottom divider approach */
+}
+
+.LegalDocs__Trigger{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: none;
+  padding: 1.5rem 2rem; /* was 1.1rem 1.5rem — bigger bar */
+  font-size: 1.3rem; /* was 1.05rem — bigger text */
+  font-weight: 600;
+  color: #2b2b2b;
+  cursor: pointer;
+  text-align: left;
+}
+
+.LegalDocs__Trigger:hover{
+  background: #f7f7ef;
+}
+
+.LegalDocs__Chevron{
+  color: #4E7B34;
+  transition: transform 0.2s ease;
+  font-size: 1.5rem; /* was 1.2rem — bigger chevron */
+}
+
+.LegalDocs__Item.is-open .LegalDocs__Chevron{
+  transform: rotate(180deg);
+}
+
+.LegalDocs__Panel{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.LegalDocs__PanelInner{
+  padding: 0.5rem 2rem 2rem; /* was 0.5rem 1.5rem 1.5rem */
+}
+
+.LegalDocs__Description{
+  font-size: 1.05rem; /* was 0.95rem */
+  line-height: 1.8;
+  color: #444;
+  margin: 0 0 1.5rem;
+}
+
+.LegalDocs__Images{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* was minmax(100px, 1fr) — much bigger thumbnails */
+  gap: 16px; /* was 10px */
+}
+
+.LegalDocs__Images img{
+  width: 100%;
+  border-radius: 8px; /* was 6px */
+  border: 1px solid #e5e5dd;
+  cursor: pointer;
+}
+
+@media (max-width: 700px){
+  .LegalDocuments__Content{
+    padding: 3rem 1.5rem;
+  }
+
+  .LegalDocs__Images{
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* NEW: smaller min on mobile */
+  }
+}
+.TenYearProgram__Content{
+  background: #DFE0A3;
+  min-height: 100vh;
+  padding: 4rem 6rem;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.TenYearProgram__Content h1{
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #4E7B34;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.TenYearProgram__Content h1::after{
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #4E7B34;
+  margin: 1rem 0 1.5rem;
+}
+
+.TenYearProgram__Content p{
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #2b2b2b;
+  margin-bottom: 1.5rem;
+}
+
+.TenYearProgram__Content .Downloadable_Test{
+  text-align: left;
+}
+
+.TenYearProgram__Content .Downloadable_Test a{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #4E7B34;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.TenYearProgram__Content .Downloadable_Test a:hover{
+  background: #3d6329;
+}
+
+.TenYearProgram__ImageBlock{
+  background: rgba(255,255,255,0.35);
+  border-radius: 12px;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.TenYearProgram__ImageBlock img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 900px){
+  .TenYearProgram__Content{
+    grid-template-columns: 1fr;
+    padding: 3rem 2rem;
+  }
+}
+
+.QuarterlyReport__Content{
+  background: #DFE0A3;
+  min-height: 100vh;
+  padding: 4rem 6rem;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.QuarterlyReport__Content h1{
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #4E7B34;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.QuarterlyReport__Content h1::after{
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #4E7B34;
+  margin: 1rem 0 1.5rem;
+}
+
+.QuarterlyReport__Content p{
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #2b2b2b;
+  margin-bottom: 1.5rem;
+}
+
+.QuarterlyReport__Content .Downloadable_Report{
+  text-align: left;
+}
+
+.QuarterlyReport__Content .Downloadable_Report a{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #4E7B34;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.QuarterlyReport__Content .Downloadable_Report a:hover{
+  background: #3d6329;
+}
+
+.QuarterlyReport__ImageBlock{
+  background: rgba(255,255,255,0.35);
+  border-radius: 12px;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.QuarterlyReport__ImageBlock img{
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+}
+
+@media (max-width: 900px){
+  .QuarterlyReport__Content{
+    grid-template-columns: 1fr;
+    padding: 3rem 2rem;
+  }
+}
+
+.LegalDocuments__Content{
+  background: #DFE0A3;
+  min-height: 100vh;
+  padding: 4rem 6rem;
+  box-sizing: border-box;
+}
+
+.LegalDocuments__Content h1{
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #4E7B34;
+  margin: 0 0 2rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px){
+  .LegalDocuments__Content{
+    padding: 3rem 1.5rem;
+  }
+}
+
+.LiquidWaste__Intro{
+  font-size: 2rem;
+  line-height: 1.8;
+  color: #2b2b2b;
+  max-width: 1100px;
+  margin: 0 0 2rem;
+  text-align: justify;
+}
+
+.LiquidWaste__Layout{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+  max-width: 1400px;
+}
+
+.LiquidWaste__Carousel{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.LiquidWaste__Carousel img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.LiquidWaste__Carousel img.is-active{
+  opacity: 1;
+}
+
+.LiquidWaste__Standalone img{
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #e5e5dd;
+}
+
+.LiquidWaste__TextColumn{
+  padding-top: 4px;
+}
+
+.LiquidWaste__Caption{
+  font-size: 1.5rem;
+  line-height: 1.9;
+  color: #333;
+  margin: 0;
+  text-align: justify;
+}
+
+@media (max-width: 1000px){
+  .LiquidWaste__Layout{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.Members__Section{
+  background: #DFE0A3;
+  min-height: 100vh;
+  padding: 3rem 6rem 4rem;
+  box-sizing: border-box;
+}
+
+.Members__TopBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.Members__TopBar h1{
+  font-size: 2rem;
+  font-weight: 800;
+  color: #4E7B34;
+  margin: 0;
+}
+
+.Members__Filter{
+  background: #4E7B34;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.Members__GroupLabel{
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #4E7B34;
+  margin: 2rem 0 1.5rem;
+}
+
+.Members__GroupLabel--center{
+  text-align: center;
+}
+
+.Members__Councilors{
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.Members__CouncilorRow{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.Members__CouncilorRow:nth-child(even){
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Members__CouncilorPhoto{
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.Members__CouncilorPhoto img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Members__CouncilorName{
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2b2b2b;
+  text-align: center;
+}
+
+.Members__EmployeeRows{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.Members__EmployeeRow{
+  display: grid;
+  gap: 1.5rem;
+}
+
+.Members__EmployeeCard{
+  cursor: pointer;
+}
+
+.Members__EmployeeCard img{
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.Members__EmployeeName{
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+@media (max-width: 700px){
+  .Members__Section{
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .Members__EmployeeRow{
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .Members__CouncilorRow,
+  .Members__CouncilorRow:nth-child(even){
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.MembersInfo__Section{
+  background: #DFE0A3;
+  min-height: 100vh;
+  padding: 2rem 6rem 4rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.MembersInfo__Back{
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #2b2b2b;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.MembersInfo__Section h1{
+  font-size: 2rem;
+  font-weight: 800;
+  color: #4E7B34;
+  margin: 0 0 2rem;
+}
+
+.MembersInfo__Layout{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem 3rem;
+  max-width: 900px;
+}
+
+.MembersInfo__PhotoNav{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  grid-row: 1 / span 2;
+}
+
+.MembersInfo__Photo{
+  width: 260px;
+  height: 260px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.MembersInfo__Photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.MembersInfo__Arrow{
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #2b2b2b;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.MembersInfo__Arrow:hover{
+  color: #4E7B34;
+}
+
+.MembersInfo__Map{
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.MembersInfo__Details p{
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2b2b2b;
+  margin: 0.5rem 0;
+}
+
+.MembersInfo__Details a{
+  color: #2b2b2b;
+  text-decoration: underline;
+}
+
+@media (max-width: 700px){
+  .MembersInfo__Section{
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .MembersInfo__Layout{
+    grid-template-columns: 1fr;
+  }
+
+  .MembersInfo__PhotoNav{
+    justify-content: center;
+    grid-row: auto;
+  }
+}
+
+.footer .footer__content{
+  background: #DFE0A3;
+  bottom: 0;
+
+}
+
+.footer .footer__content p{
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 2.5rem;
+}
+
+
+ 

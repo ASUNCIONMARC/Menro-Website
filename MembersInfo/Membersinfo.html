@@ -4,35 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MembersInfo</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="header">
         <div class="container">
             <div class="header__wrapper">
                 <div class="branding">
-                      <a href="/Home/Home.html">
+                    <a href="/Home/Home.html">
                         <img src="/img/Background_img-removebg-preview.png" alt="">
                     </a>
+                </div>
 
-                    
-        </div>
-            <div class="header__nav">
+                <button class="burger" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
 
-                            <ul>
-                                <li><a href="/Members/Members.html">Members</a></li>
-                                <li><a href="/Notarization.html">Notarization</a></li>
-                                <div class="dropdown">
-                                    <button>Others</button>
-                                    <div class="content">
-                                        <a href="/10yrPrgm.html">10 Year Program</a>
-                                        <a href="/frstQrter.html">First Quarter Report</a>
-                                        <a href="/LqDWste.html">Liquid Waste Program</a>
-                                    </div>
-                                </div>
-                            </ul>
+                <div class="header__nav">
+                    <ul>
+                        <li><a href="/Members/Members.html">Members</a></li>
+                        <li><a href="/Notarization/Notarization.html">Notarization</a></li>
+                        <div class="dropdown">
+                            <button>Others</button>
+                            <div class="content">
+                                <a href="/10yrPrgm.html">10 Year Program</a>
+                                <a href="/frstQrter.html">First Quarter Report</a>
+                                <a href="/LiquidWaste/LqDWste.html">Liquid Waste Program</a>
+                            </div>
                         </div>
-     </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-     <link rel="stylesheet" href="/style.css">
+    <div class="MembersInfo__Section">
+
+        <a href="/Members/Members.html" class="MembersInfo__Back">&#8592;</a>
+
+        <h1>Staff Info</h1>
+
+        <div class="MembersInfo__Layout">
+
+            <div class="MembersInfo__PhotoNav">
+                <button class="MembersInfo__Arrow" id="prevBtn">&#8592;</button>
+                <div class="MembersInfo__Photo">
+                    <img id="staffPhoto" src="" alt="Staff photo">
+                </div>
+                <button class="MembersInfo__Arrow" id="nextBtn">&#8594;</button>
+            </div>
+
+            <div class="MembersInfo__Map">
+                <iframe
+                    id="staffMap"
+                    src=""
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="MembersInfo__Details">
+                <p id="staffName"></p>
+                <p id="staffPosition"></p>
+                <p id="staffPlace"></p>
+                <p><a id="staffFacebook" href="#" target="_blank">Facebook</a></p>
+                <p id="staffPhone"></p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="footer__content">
+            <p>COPYRIGHT(©) 2026 MARC M. ASUNCION & Menro Office Rizal ALL RIGHTS RESERVE</p>
+        </div>
+    </div>
+
+    <script src="/MembersInfo/Membersinfo.js"></script>
 </body>
 </html>

@@ -1,0 +1,347 @@
+[
+  {
+    "id": "m1",
+    "name": "Don T Concordia",
+    "position": "Councilor",
+    "role": "councilor",
+    "place": "Municipal Hall",
+    "facebook": "https://www.facebook.com/don.concordia",
+    "phone": "0917-123-4567",
+    "image": "/img/Don_T_Concordia.jpg",
+    "lat": 14.110593963748032,
+    "lng": 121.39573643881387,
+    "zoom": 16
+  },
+  {
+    "id": "m2",
+    "name": "Mario B Nicolas",
+    "position": "Councilor",
+    "role": "councilor",
+    "place": "Municipal Hall",
+    "facebook": "https://facebook.com/example2",
+    "phone": "0917-234-5678",
+    "image": "/img/Mario_B_Nicolas.jpg",
+    "lat": 14.110593963748032,
+    "lng": 121.39573643881387,
+    "zoom": 16
+  },
+  {
+    "id": "e1",
+    "name": "Fermin C Dorado",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example3",
+    "phone": "0917-345-6789",
+    "image": "/img/Fermin_C_Dorado.jpg",
+    "lat": 14.1033,
+    "lng": 121.4014
+  },
+  {
+    "id": "e2",
+    "name": "Ronald C Dorado",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example4",
+    "phone": "0917-456-7890",
+    "image": "/img/Ronald_C_Dorado.jpg",
+    "lat": 14.1033,
+    "lng": 121.4014
+  },
+  {
+    "id": "e3",
+    "name": "Jemarjo I Isles",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Municipal Hall",
+    "facebook": "https://facebook.com/example5",
+    "phone": "0917-567-8901",
+    "image": "/img/Jemarjo_I_Isles.jpg",
+     "lat": 14.110593963748032,
+    "lng": 121.39573643881387,
+    "zoom": 16
+  },
+  {
+    "id": "e4",
+    "name": "Nida G Propogo",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Nida_G_Propogo.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+    "id": "e5",
+    "name": "Rita S Salvador",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Rita_S_Salvador.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+  "id": "e6",
+  "name": "Eduardo M Banting",
+  "position": "Employee",
+  "role": "employee",
+  "place": [
+    { "name": "Brgy. Tala", "lat": 14.103313, "lng": 121.392576, "zoom": 15 },
+    { "name": "Brgy. Pook", "lat": 14.1109, "lng": 121.4049, "zoom": 15 }
+  ],
+  "facebook": "https://facebook.com/example6",
+  "phone": "0917-678-9012",
+  "image": "/img/Eduardo_M_Banting.jpg"
+},
+  {
+  "id": "e7",
+  "name": "Roilan A Bortonel",
+  "position": "Employee",
+  "role": "employee",
+  "place": [
+    { "name": "Brgy. Tuy", "lat": 14.106933433956762,  "lng": 121.4041668597481, "zoom": 13 },
+    { "name": "Brgy. Talaga", "lat": 14.1050, "lng": 121.4100, "zoom": 15 }
+  ],
+  "facebook": "https://facebook.com/example6",
+  "phone": "0917-678-9012",
+  "image": "/img/Roilan_A_Bortonel.jpg"
+},
+ {
+  "id": "e8",
+  "name": "John Lee S Alcantara",
+  "position": "Employee",
+  "role": "employee",
+  "place": [
+    { "name": "Brgy. East Poblacion", "lat": 14.1040, "lng": 121.4030, "zoom": 15 },
+    { "name": "Brgy. Paule 1", "lat": 14.0975, "lng": 121.4020, "zoom": 15 }
+  ],
+  "facebook": "https://facebook.com/example6",
+  "phone": "0917-678-9012",
+  "image": "/img/John_Lee_S_Alcantara.jpg"
+},
+  {
+    "id": "e9",
+    "name": "Ricardo C Dorado",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Ricardo_C_Dorado.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+    "id": "e10",
+    "name": "Leopoldo R Amido",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Leopoldo_R_Amido.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+    "id": "e11",
+    "name": "Mac Arthur F Eligado",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Mac_Arthur_F_Eligado.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+    "id": "e12",
+    "name": "Cerelino Formales",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Cerelino_Formales.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+    "id": "e13",
+    "name": "Adrian Jay Mauhay",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Municipal Hall",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Adrian_Jay_Mauhay.jpg",
+     "lat": 14.110593963748032,
+    "lng": 121.39573643881387,
+    "zoom": 16
+  },
+  {
+    "id": "e14",
+    "name": "Helen M Coronado",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Helen_M_Coronado.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+  "id": "e15",
+  "name": "Freddie Alcantara",
+  "position": "Employee",
+  "role": "employee",
+  "place": [
+    { "name": "Brgy. Tala", "lat": 14.103313, "lng": 121.392576, "zoom": 15 },
+    { "name": "Brgy. Pook", "lat": 14.1109, "lng": 121.4049, "zoom": 15 }
+  ],
+  "facebook": "https://facebook.com/example6",
+  "phone": "0917-678-9012",
+  "image": "/img/Freddie_Alcantara.jpg"
+},
+  {
+  "id": "e16",
+  "name": "Dhean Lawrence E Mauhay",
+  "position": "Employee",
+  "role": "employee",
+  "place": [
+    { "name": "Brgy. Paule 2", "lat": 14.0990, "lng": 121.4050, "zoom": 15 },
+    { "name": "Brgy. West Poblacion", "lat": 14.11039898044473,  "lng": 121.39244995979817, "zoom": 15 }
+  ],
+  "facebook": "https://facebook.com/example6",
+  "phone": "0917-678-9012",
+  "image": "/img/Dhean_Lawrence_E_Mauhay.jpg"
+},
+  {
+    "id": "e17",
+    "name": "Efren I Subijano",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Efren_I_Subijano.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+    "id": "e18",
+    "name": "Nympha V Subijano",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Nympha_V_Subijano.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+    "id": "e19",
+    "name": "Salome R Subijano",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Salome_R_Subijano.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+    "id": "e20",
+    "name": "Diosdado C Tadeo",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Diosdado_C_Tadeo.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+    "id": "e21",
+    "name": "Helen C Tumbado",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Helen_C_Tumbado.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+    "id": "e22",
+    "name": "Eduardo Q Manila",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Eduardo_Q_Manila.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+    "id": "e23",
+    "name": "Joshua Tumbado",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Joshua_Tumbado.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+    "id": "e24",
+    "name": "Remedios C Dorado",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Remedios_C_Dorado.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+    "id": "e25",
+    "name": "Justo C Untivero",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Justo_C_Untivero.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  },
+  {
+    "id": "e26",
+    "name": "Numeriano C Zarzua Jr",
+    "position": "Employee",
+    "role": "employee",
+    "place": "Rizal",
+    "facebook": "https://facebook.com/example6",
+    "phone": "0917-678-9012",
+    "image": "/img/Numeriano_C_Zarzua_Jr.jpg",
+    "lat": 14.1006,
+    "lng": 121.3948
+  }
+]

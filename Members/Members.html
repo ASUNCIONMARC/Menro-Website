@@ -4,35 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Members</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="header">
         <div class="container">
             <div class="header__wrapper">
                 <div class="branding">
-                     <a href="/Home/Home.html">
+                    <a href="/Home/Home.html">
                         <img src="/img/Background_img-removebg-preview.png" alt="">
                     </a>
+                </div>
 
-                    
-        </div>
-            <div class="header__nav">
+                <button class="burger" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
 
-                            <ul>
-                                <li><a href="/Members/Members.html">Members</a></li>
-                                <li><a href="/Notarization.html">Notarization</a></li>
-                                <div class="dropdown">
-                                    <button>Others</button>
-                                    <div class="content">
-                                        <a href="/10yrPrgm.html">10 Year Program</a>
-                                        <a href="/frstQrter.html">First Quarter Report</a>
-                                        <a href="/LqDWste.html">Liquid Waste Program</a>
-                                    </div>
-                                </div>
-                            </ul>
+                <div class="header__nav">
+                    <ul>
+                        <li><a href="/Members/Members.html">Members</a></li>
+                        <li><a href="/Notarization/Notarization.html">Notarization</a></li>
+                        <div class="dropdown">
+                            <button>Others</button>
+                            <div class="content">
+                                <a href="/10yrPrgm.html">10 Year Program</a>
+                                <a href="/frstQrter.html">First Quarter Report</a>
+                                <a href="/LiquidWaste/LqDWste.html">Liquid Waste Program</a>
+                            </div>
                         </div>
-     </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-     <link rel="stylesheet" href="/style.css">
+    <div class="Members__Section">
+
+        <div class="Members__TopBar">
+            <h1>Official Members</h1>
+            <select class="Members__Filter" id="placeFilter">
+                <option value="all">Select Filter</option>
+            </select>
+        </div>
+
+        <h2 class="Members__GroupLabel">Councilors</h2>
+        <div class="Members__Councilors" id="councilorList"></div>
+
+        <h2 class="Members__GroupLabel Members__GroupLabel--center">Employee</h2>
+        <div class="Members__EmployeeRows" id="employeeList"></div>
+
+    </div>
+
+    <div class="footer">
+        <div class="footer__content">
+            <p>COPYRIGHT(©) 2026 MARC M. ASUNCION & Menro Office Rizal ALL RIGHTS RESERVE</p>
+        </div>
+    </div>
+
+    <script src="/Members/Members.js"></script>
 </body>
 </html>
