@@ -8,39 +8,113 @@
 <body>
     <!-- Header -->
      <div class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <div class="branding">
-                    <a href="Home.html">
-                        <img src="/img/Background_img-removebg-preview.png" alt="">
-                    </a>
+    <div class="container">
+        <div class="header__wrapper">
+            <div class="branding">
+                <a href="/Home/Home.html">
+                    <img src="/img/Background_img-removebg-preview.png" alt="">
+                </a>
+            </div>
 
-                    
-        </div>
+            <button class="burger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+
             <div class="header__nav">
-
-                            <ul>
-                                <li><a href="/Members/Members.html">Members</a></li>
-                                <li><a href="/Notarization.html">Notarization</a></li>
-                                <div class="dropdown">
-                                    <button>Others</button>
-                                    <div class="content">
-                                        <a href="/10yrPrgm.html">10 Year Program</a>
-                                        <a href="/frstQrter.html">First Quarter Report</a>
-                                        <a href="/LqDWste.html">Liquid Waste Program</a>
-                                    </div>
-                                </div>
-                            </ul>
+                <ul>
+                    <li><a href="/Members/Members.html">Members</a></li>
+                    <li><a href="/Notarization/Notarization.html">Notarization</a></li>
+                    <div class="dropdown">
+                        <button>Others</button>
+                        <div class="content">
+                            <a href="/10yrPrgm.html">10 Year Program</a>
+                            <a href="/frstQrter.html">First Quarter Report</a>
+                            <a href="/LiquidWaste/LqDWste.html">Liquid Waste Program</a>
                         </div>
-     </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="LatestCollection__Section">
 
+    <div class="LatestCollection__LogoWrap">
+        <div class="LogoHover">
+            <img src="/img/main_logo-removebg-preview.png" alt="MENRO logo" class="LogoHover__default">
+            <img src="/img/old_main_logo-removebg-preview.png" alt="MENRO logo alternate" class="LogoHover__alt">
+        </div>
+    </div>
 
+    <div class="LatestCollection__Box">
+        <div class="LatestCollection__Header">
+            <h2>Latest Collection</h2>
+            <p>Changing constantly (weekly)</p>
+        </div>
+        <div class="LatestCollection__TickerViewport">
+            <div class="LatestCollection__Ticker" id="collectionTicker">
+                <!-- rows injected by JS -->
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="CollectorMonth__Section">
+
+    <div class="CollectorMonth__PhotoWrap">
+        <div class="CollectorMonth__Photo">
+            <img id="collectorPhoto" src="" alt="Collector of the month">
+        </div>
+    </div>
+
+    <div class="CollectorMonth__Details"> 
+        <h2>Collector of the Month</h2> 
+        <div class="CollectorMonth__Info"> 
+            <p class="CollectorMonth__Month" id="collectorMonthLabel"></p> 
+            <p class="CollectorMonth__Name" id="collectorName"></p> 
+            <p class="CollectorMonth__Amount" id="collectorAmount"></p> 
+        </div> 
+    </div>
+
+</div>
+
+<div class="RecentActivity__Section">
+    <h1>Menro Recent Activity</h1>
+
+    <div class="RecentActivity__List" id="recentActivityList">
+    </div>
+</div>
+
+<div class="MenroPolicies__Section">
+    <h1>Menro Policies</h1>
+
+    <div class="MenroPolicies__Grid">
+        <div class="MenroPolicies__Item">
+            <img src="/img/needed1.jpg" alt="Proclamation document">
+        </div>
+        <div class="MenroPolicies__Item">
+            <img src="/img/needed2.jpg" alt="Emergency hotlines poster">
+        </div>
+        <div class="MenroPolicies__Item">
+            <img src="/img/needed3.png" alt="RA 9003 Ecological Solid Waste Management Act poster">
+        </div>
+    </div>
+</div>
 
      <div class="footer">
-
+        <div class="footer__content">
+            <p>
+            COPYRIGHT(©) 2026 MARC M. ASUNCION & Menro Office Rizal ALL RIGHTS RESERVE
+        </p>
+        </div>
      </div>
 
 
      <link rel="stylesheet" href="/style.css">
+
+     <script src="/Home/Home.js"></script>
 </body>
 </html>
