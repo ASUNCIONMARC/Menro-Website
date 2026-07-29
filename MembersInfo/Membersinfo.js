@@ -34,7 +34,7 @@ fetch('/data/members.json')
     function render(i){
       var m = members[i];
 
-      // clear any previous carousel timer before rendering a new person
+      
       if (placeCarouselInterval){
         clearInterval(placeCarouselInterval);
         placeCarouselInterval = null;
@@ -48,7 +48,7 @@ fetch('/data/members.json')
       phone.textContent = 'Phone Number: ' + m.phone;
 
       if (Array.isArray(m.place)){
-        // multiple locations: carousel between them
+        
         var locIndex = 0;
         setMap(m.place[locIndex]);
 
@@ -57,7 +57,7 @@ fetch('/data/members.json')
           setMap(m.place[locIndex]);
         }, 4000);
       } else {
-        // single location: use the member's own lat/lng/zoom/place fields
+        
         setMap({ name: m.place, lat: m.lat, lng: m.lng, zoom: m.zoom || 12 });
       }
 

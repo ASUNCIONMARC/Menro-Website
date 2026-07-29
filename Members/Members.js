@@ -21,7 +21,7 @@ fetch('/data/members.json')
       return [place];
     }
 
-    // Populate filter dropdown with unique places
+    
     var places = Array.from(new Set(
       members.flatMap(function(m){ return getPlaceNames(m.place); })
     ));

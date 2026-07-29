@@ -95,8 +95,8 @@
     { "name": "Brgy. Tala", "lat": 14.103313, "lng": 121.392576, "zoom": 15 },
     { "name": "Brgy. Pook", "lat": 14.1109, "lng": 121.4049, "zoom": 15 }
   ],
-  "facebook": "https://facebook.com/example6",
-  "phone": "0917-678-9012",
+  "facebook": "https://www.facebook.com/ed.banting",
+  "phone": "0955-8321-885",
   "image": "/img/Eduardo_M_Banting.jpg"
 },
   {
@@ -109,7 +109,7 @@
     { "name": "Brgy. Talaga", "lat": 14.1050, "lng": 121.4100, "zoom": 15 }
   ],
   "facebook": "https://facebook.com/example6",
-  "phone": "0917-678-9012",
+  "phone": "0955-4417-129",
   "image": "/img/Roilan_A_Bortonel.jpg"
 },
  {
@@ -122,7 +122,7 @@
     { "name": "Brgy. Paule 1", "lat": 14.0975, "lng": 121.4020, "zoom": 15 }
   ],
   "facebook": "https://facebook.com/example6",
-  "phone": "0917-678-9012",
+  "phone": "0956-9773-081",
   "image": "/img/John_Lee_S_Alcantara.jpg"
 },
   {
@@ -180,7 +180,7 @@
     "role": "employee",
     "place": "Municipal Hall",
     "facebook": "https://facebook.com/example6",
-    "phone": "0917-678-9012",
+    "phone": "0964-7644-678",
     "image": "/img/Adrian_Jay_Mauhay.jpg",
      "lat": 14.110593963748032,
     "lng": 121.39573643881387,
@@ -208,7 +208,7 @@
     { "name": "Brgy. Pook", "lat": 14.1109, "lng": 121.4049, "zoom": 15 }
   ],
   "facebook": "https://facebook.com/example6",
-  "phone": "0917-678-9012",
+  "phone": "0917-8374-892",
   "image": "/img/Freddie_Alcantara.jpg"
 },
   {
@@ -221,7 +221,7 @@
     { "name": "Brgy. West Poblacion", "lat": 14.11039898044473,  "lng": 121.39244995979817, "zoom": 15 }
   ],
   "facebook": "https://facebook.com/example6",
-  "phone": "0917-678-9012",
+  "phone": "0927-8376-586",
   "image": "/img/Dhean_Lawrence_E_Mauhay.jpg"
 },
   {

@@ -321,7 +321,7 @@ html, body{
   }
 
   .dropdown button{
-    display: none !important; /* FIXED: removed the invalid semicolon before !important */
+    display: none !important; 
   }
 
   .dropdown .content{
@@ -337,16 +337,8 @@ html, body{
   }
 }
 
-  .branding{
-    position:relative;
-    z-index: 1001;
-  }
+  
 
-  .branding img{
-    width: 60px;
-    height: 60px;
-  }
-}
 
 .LatestCollection__Section{
   display: grid;
@@ -355,7 +347,7 @@ html, body{
   align-items: center;
   max-width: 100%;
   width: 100%;
-  padding: 4rem 6rem; /* NEW: since body no longer has a dedicated content wrapper with padding */
+  padding: 4rem 6rem; 
   box-sizing: border-box;
 }
 
@@ -366,7 +358,7 @@ html, body{
 
 .LogoHover{
   position: relative;
-  width: 280px; /* CHANGED: was 220px — bigger logo */
+  width: 280px; 
   height: 280px;
 }
 
@@ -399,8 +391,8 @@ html, body{
 .LatestCollection__Box{
   background: #fff;
   border-radius: 12px;
-  padding: 2rem; /* CHANGED: was 1.5rem */
-  height: 420px; /* CHANGED: was 320px — taller to match bigger text */
+  padding: 2rem;
+  height: 420px; 
   display: flex;
   flex-direction: column;
   background: #DFE0A3;
@@ -415,13 +407,13 @@ html, body{
 
 .LatestCollection__Header h2{
   margin: 0;
-  font-size: 1.8rem; /* CHANGED: was 1.3rem */
+  font-size: 1.8rem; 
   color: #2b2b2b;
 }
 
 .LatestCollection__Header p{
   margin: 6px 0 0;
-  font-size: 1.05rem; /* CHANGED: was 0.9rem */
+  font-size: 1.05rem;
   color: #777;
 }
 
@@ -496,14 +488,14 @@ html, body{
 }
 
 .CollectorMonth__Details{
-  justify-self: end; /* CHANGED: pushes the block to the right side of its grid column */
-  padding-left: 0; /* removed the old left padding, no longer needed */
-  padding-right: 35rem; /* NEW: keeps it from touching the very edge */
-  text-align: left; /* text still reads left-to-right within the block */
-}
+    justify-self: center; /* NEW: overrides the desktop 'end' alignment */
+    padding-right: 0; /* NEW: cancels the desktop 35rem padding */
+    text-align: center; /* NEW: centers the text block on mobile */
+  }
+
 
 .CollectorMonth__Details h2{
-  font-size: 3.5rem; /* was 3rem — bigger */
+  font-size: 3rem; /* was 3rem — bigger */
   font-weight: 800;
   color: #4E7B34;
   margin: 0 0 2.5rem;
@@ -537,6 +529,13 @@ html, body{
   color: #2b2b2b;
   margin: 0;
 }
+
+.CollectorMonth__Month,
+  .CollectorMonth__Name,
+  .CollectorMonth__Amount{
+    font-size: 1.5rem; /* NEW: scales down the detail text for mobile */
+  }
+
 @media (max-width: 900px){
   .LatestCollection__Section{
     grid-template-columns: 1fr;
@@ -548,7 +547,7 @@ html, body{
     justify-items: center;
     text-align: center;
     padding: 2rem 1.5rem 3rem;
-    margin: 0 1.5rem;
+    
   }
 }
 
@@ -569,17 +568,17 @@ html, body{
 .RecentActivity__Row{
   display: grid;
   grid-template-columns: 280px 1fr;
-  gap: 2rem; /* CHANGED: was 3rem — tightens the gap between image and text */
+  gap: 2rem; 
   align-items: center;
-  max-width: 900px; /* NEW: caps the row so caption doesn't stretch across the full page width */
+  max-width: 900px;
   margin-bottom: 3rem;
-  margin-left:30rem;
+  margin-left:25rem;
 }
 
 .RecentActivity__Row:nth-child(even){
   grid-template-columns: 1fr 280px;
-  margin-left: auto; /* NEW: pushes the even row to the right side, mirroring the odd row's left position */
-  margin-right: 30rem
+  margin-left: auto; 
+  margin-right: 25rem
 }
 
 .RecentActivity__Row:nth-child(even) .RecentActivity__Carousel{
@@ -627,11 +626,18 @@ html, body{
     grid-template-columns: 1fr;
     text-align: center;
     justify-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
   }
 
   .RecentActivity__Row:nth-child(even) .RecentActivity__Carousel,
   .RecentActivity__Row:nth-child(even) .RecentActivity__Caption{
     order: unset;
+  }
+
+  .RecentActivity__Caption{
+    font-size: 1.5rem;
   }
 }
 
@@ -1044,7 +1050,7 @@ html, body{
 }
 
 .Members__GroupLabel{
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #4E7B34;
   margin: 2rem 0 1.5rem;
