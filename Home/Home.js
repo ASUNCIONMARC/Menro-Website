@@ -1,6 +1,6 @@
 var burger = document.querySelector('.burger');
 var nav = document.querySelector('.header__nav');
-var branding = document.querySelector('.branding'); // FIXED: this was missing, causing a silent error
+var branding = document.querySelector('.branding');
 
 burger.addEventListener('click', function(){
   var isOpen = nav.classList.toggle('is-open');
@@ -11,10 +11,25 @@ burger.addEventListener('click', function(){
   document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
+// TC-003 fix: close the mobile menu with the Escape key
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape' && nav.classList.contains('is-open')){
+    burger.click();
+  }
+});
+
+
+// ---------- Latest Collection ----------
 fetch('/data/latest-collection.json')
   .then(function(res){ return res.json(); })
   .then(function(entries){
     var ticker = document.getElementById('collectionTicker');
+
+    // TC-011 fix: show a real message instead of "undefined" when there's no data
+    if (!entries || entries.length === 0){
+      ticker.parentElement.innerHTML = '<p style="text-align:center; padding:2rem;">No collection records yet.</p>';
+      return;
+    }
 
     var doubled = entries.concat(entries);
     doubled.forEach(function(entry){
@@ -55,9 +70,16 @@ fetch('/data/latest-collection.json')
     ticker.parentElement.addEventListener('mouseleave', function(){ paused = false; });
   })
   .catch(function(err){
+    // TC-012 fix: show a real error message instead of staying blank
     console.error('Failed to load collection data:', err);
+    var viewport = document.querySelector('.LatestCollection__TickerViewport');
+    if (viewport){
+      viewport.innerHTML = '<p style="text-align:center; padding:2rem; color:#a33;">Unable to load the latest collections right now.</p>';
+    }
   });
 
+
+// ---------- Collector of the Month ----------
 fetch('/data/collector-of-the-month.json')
   .then(function(res){ return res.json(); })
   .then(function(collectors){
@@ -66,6 +88,13 @@ fetch('/data/collector-of-the-month.json')
     var nameLabel = document.getElementById('collectorName');
     var amountLabel = document.getElementById('collectorAmount');
     var infoBlock = document.querySelector('.CollectorMonth__Info');
+
+    // TC-016 fix: show a real message instead of a blank photo/heading when there's no data
+    if (!collectors || collectors.length === 0){
+      infoBlock.innerHTML = '<p style="text-align:center;">No collector data for this month yet.</p>';
+      photo.style.display = 'none';
+      return;
+    }
 
     var highestAmount = Math.max.apply(null, collectors.map(function(c){ return c.amount; }));
     var topCollectors = collectors.filter(function(c){ return c.amount === highestAmount; });
@@ -106,6 +135,8 @@ fetch('/data/collector-of-the-month.json')
     console.error('Failed to load collector data:', err);
   });
 
+
+// ---------- Recent Activity ----------
 fetch('/data/recent-activity.json')
   .then(function(res){ return res.json(); })
   .then(function(activities){
@@ -117,6 +148,8 @@ fetch('/data/recent-activity.json')
 
       var carousel = document.createElement('div');
       carousel.className = 'RecentActivity__Carousel';
+      carousel.setAttribute('tabindex', '0'); // TC-019 fix: makes the carousel keyboard-focusable
+
       activity.images.forEach(function(src, i){
         var img = document.createElement('img');
         img.src = src;

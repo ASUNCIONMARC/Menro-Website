@@ -1,10 +1,14 @@
 var burger = document.querySelector('.burger');
 var nav = document.querySelector('.header__nav');
+var branding = document.querySelector('.branding');
 
 burger.addEventListener('click', function(){
   var isOpen = nav.classList.toggle('is-open');
   burger.classList.toggle('is-active');
   burger.setAttribute('aria-expanded', isOpen);
+  branding.classList.toggle('is-disabled', isOpen);
+  document.body.classList.toggle('menu-open', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
 fetch('/data/members.json')
@@ -21,7 +25,6 @@ fetch('/data/members.json')
       return [place];
     }
 
-    
     var places = Array.from(new Set(
       members.flatMap(function(m){ return getPlaceNames(m.place); })
     ));
@@ -93,3 +96,9 @@ fetch('/data/members.json')
   .catch(function(err){
     console.error('Failed to load members data:', err);
   });
+
+  document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape' && nav.classList.contains('is-open')){
+    burger.click();
+  }
+});

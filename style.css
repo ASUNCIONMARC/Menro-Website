@@ -1,6 +1,4 @@
-* 
-
-{
+* {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -321,7 +319,7 @@ html, body{
   }
 
   .dropdown button{
-    display: none !important; 
+    display: none !important;
   }
 
   .dropdown .content{
@@ -337,9 +335,6 @@ html, body{
   }
 }
 
-  
-
-
 .LatestCollection__Section{
   display: grid;
   grid-template-columns: 1fr 1.6fr;
@@ -347,7 +342,7 @@ html, body{
   align-items: center;
   max-width: 100%;
   width: 100%;
-  padding: 4rem 6rem; 
+  padding: 4rem 6rem;
   box-sizing: border-box;
 }
 
@@ -358,7 +353,7 @@ html, body{
 
 .LogoHover{
   position: relative;
-  width: 280px; 
+  width: 280px;
   height: 280px;
 }
 
@@ -392,7 +387,7 @@ html, body{
   background: #fff;
   border-radius: 12px;
   padding: 2rem;
-  height: 420px; 
+  height: 420px;
   display: flex;
   flex-direction: column;
   background: #DFE0A3;
@@ -407,7 +402,7 @@ html, body{
 
 .LatestCollection__Header h2{
   margin: 0;
-  font-size: 1.8rem; 
+  font-size: 1.8rem;
   color: #2b2b2b;
 }
 
@@ -429,9 +424,9 @@ html, body{
 }
 
 .LatestCollection__Row{
-  padding: 18px 12px; /* CHANGED: was 12px 8px */
+  padding: 18px 12px;
   border-bottom: 1px solid #e5e5dd;
-  font-size: 1.3rem; /* CHANGED: was 0.95rem — much bigger */
+  font-size: 1.3rem;
   color: #333;
   display: flex;
   justify-content: space-between;
@@ -450,7 +445,7 @@ html, body{
 
 .CollectorMonth__Section{
   display: grid;
-  grid-template-columns: 1fr 1.6fr; /* CHANGED: was 'auto 1fr' — now matches LatestCollection's columns */
+  grid-template-columns: 1fr 1.6fr;
   gap: 3rem;
   align-items: center;
   width: 100%;
@@ -460,7 +455,7 @@ html, body{
 }
 
 .CollectorMonth__PhotoWrap{
-  display: flex; /* NEW wrapper, same pattern as .LatestCollection__LogoWrap */
+  display: flex;
   justify-content: center;
 }
 
@@ -471,7 +466,7 @@ html, body{
   overflow: hidden;
   background: #eee;
   flex-shrink: 0;
-  margin-left: 0; /* CHANGED: removed the manual nudge, centering handles positioning now */
+  margin-left: 0;
 }
 
 .CollectorMonth__Photo img{
@@ -480,7 +475,6 @@ html, body{
   object-fit: cover;
   opacity: 1;
   transition: opacity 0.6s ease;
-  
 }
 
 .CollectorMonth__Photo img.is-fading{
@@ -488,14 +482,13 @@ html, body{
 }
 
 .CollectorMonth__Details{
-    justify-self: center; /* NEW: overrides the desktop 'end' alignment */
-    padding-right: 0; /* NEW: cancels the desktop 35rem padding */
-    text-align: center; /* NEW: centers the text block on mobile */
-  }
-
+  justify-self: center;
+  padding-right: 0;
+  text-align: center;
+}
 
 .CollectorMonth__Details h2{
-  font-size: 3rem; /* was 3rem — bigger */
+  font-size: 3rem;
   font-weight: 800;
   color: #4E7B34;
   margin: 0 0 2.5rem;
@@ -510,21 +503,21 @@ html, body{
 }
 
 .CollectorMonth__Month{
-  font-size: 2.2rem; /* was 1.8rem */
+  font-size: 2.2rem;
   font-weight: 700;
   color: #2b2b2b;
   margin: 0 0 1.25rem;
 }
 
 .CollectorMonth__Name{
-  font-size: 2rem; /* was 1.6rem */
+  font-size: 2rem;
   font-weight: 700;
   color: #2b2b2b;
   margin: 0 0 1rem;
 }
 
 .CollectorMonth__Amount{
-  font-size: 1.8rem; /* was 1.4rem */
+  font-size: 1.8rem;
   font-weight: 700;
   color: #2b2b2b;
   margin: 0;
@@ -533,7 +526,7 @@ html, body{
 .CollectorMonth__Month,
   .CollectorMonth__Name,
   .CollectorMonth__Amount{
-    font-size: 1.5rem; /* NEW: scales down the detail text for mobile */
+    font-size: 1.5rem;
   }
 
 @media (max-width: 900px){
@@ -547,7 +540,6 @@ html, body{
     justify-items: center;
     text-align: center;
     padding: 2rem 1.5rem 3rem;
-    
   }
 }
 
@@ -568,7 +560,7 @@ html, body{
 .RecentActivity__Row{
   display: grid;
   grid-template-columns: 280px 1fr;
-  gap: 2rem; 
+  gap: 2rem;
   align-items: center;
   max-width: 900px;
   margin-bottom: 3rem;
@@ -577,7 +569,7 @@ html, body{
 
 .RecentActivity__Row:nth-child(even){
   grid-template-columns: 1fr 280px;
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: 25rem
 }
 
@@ -615,9 +607,14 @@ html, body{
 }
 
 .RecentActivity__Caption{
-  font-size: 2rem; /* CHANGED: was 1.3rem — bigger since there's more room now */
+  font-size: 2rem;
   line-height: 1.7;
   color: #2b2b2b;
+}
+
+.RecentActivity__Carousel:focus{
+  outline: 3px solid #4E7B34;
+  outline-offset: 2px;
 }
 
 @media (max-width: 900px){
@@ -693,14 +690,14 @@ html, body{
   max-width: 900px;
   display: flex;
   flex-direction: column;
-  gap: 16px; /* NEW: space between each bar */
+  gap: 16px;
 }
 
 .LegalDocs__Item{
-  background: #fff; /* moved here from .LegalDocs__Accordion since items are now separate cards */
-  border-radius: 10px; /* NEW: each bar is now its own rounded card */
+  background: #fff;
+  border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #e5e5dd; /* replaces the old border-bottom divider approach */
+  border: 1px solid #e5e5dd;
 }
 
 .LegalDocs__Trigger{
@@ -710,8 +707,8 @@ html, body{
   justify-content: space-between;
   background: #fff;
   border: none;
-  padding: 1.5rem 2rem; /* was 1.1rem 1.5rem — bigger bar */
-  font-size: 1.3rem; /* was 1.05rem — bigger text */
+  padding: 1.5rem 2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #2b2b2b;
   cursor: pointer;
@@ -725,7 +722,7 @@ html, body{
 .LegalDocs__Chevron{
   color: #4E7B34;
   transition: transform 0.2s ease;
-  font-size: 1.5rem; /* was 1.2rem — bigger chevron */
+  font-size: 1.5rem;
 }
 
 .LegalDocs__Item.is-open .LegalDocs__Chevron{
@@ -739,11 +736,11 @@ html, body{
 }
 
 .LegalDocs__PanelInner{
-  padding: 0.5rem 2rem 2rem; /* was 0.5rem 1.5rem 1.5rem */
+  padding: 0.5rem 2rem 2rem;
 }
 
 .LegalDocs__Description{
-  font-size: 1.05rem; /* was 0.95rem */
+  font-size: 1.05rem;
   line-height: 1.8;
   color: #444;
   margin: 0 0 1.5rem;
@@ -751,13 +748,13 @@ html, body{
 
 .LegalDocs__Images{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* was minmax(100px, 1fr) — much bigger thumbnails */
-  gap: 16px; /* was 10px */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
 }
 
 .LegalDocs__Images img{
   width: 100%;
-  border-radius: 8px; /* was 6px */
+  border-radius: 8px;
   border: 1px solid #e5e5dd;
   cursor: pointer;
 }
@@ -768,7 +765,7 @@ html, body{
   }
 
   .LegalDocs__Images{
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* NEW: smaller min on mobile */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }
 .TenYearProgram__Content{
@@ -1259,6 +1256,3 @@ html, body{
   font-size: 10px;
   padding: 2.5rem;
 }
-
-
- 

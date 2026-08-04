@@ -1,10 +1,14 @@
 var burger = document.querySelector('.burger');
 var nav = document.querySelector('.header__nav');
+var branding = document.querySelector('.branding');
 
 burger.addEventListener('click', function(){
   var isOpen = nav.classList.toggle('is-open');
   burger.classList.toggle('is-active');
   burger.setAttribute('aria-expanded', isOpen);
+  branding.classList.toggle('is-disabled', isOpen);
+  document.body.classList.toggle('menu-open', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
 fetch('/data/members.json')
@@ -34,7 +38,6 @@ fetch('/data/members.json')
     function render(i){
       var m = members[i];
 
-      
       if (placeCarouselInterval){
         clearInterval(placeCarouselInterval);
         placeCarouselInterval = null;
@@ -48,7 +51,6 @@ fetch('/data/members.json')
       phone.textContent = 'Phone Number: ' + m.phone;
 
       if (Array.isArray(m.place)){
-        
         var locIndex = 0;
         setMap(m.place[locIndex]);
 
@@ -57,7 +59,6 @@ fetch('/data/members.json')
           setMap(m.place[locIndex]);
         }, 4000);
       } else {
-        
         setMap({ name: m.place, lat: m.lat, lng: m.lng, zoom: m.zoom || 12 });
       }
 
@@ -80,3 +81,9 @@ fetch('/data/members.json')
   .catch(function(err){
     console.error('Failed to load member data:', err);
   });
+
+  document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape' && nav.classList.contains('is-open')){
+    burger.click();
+  }
+});
