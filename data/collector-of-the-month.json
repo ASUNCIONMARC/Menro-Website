@@ -1,6 +1,7 @@
 [
-  { "month": "July 2026", "name": "Angelo I Dimayuga", "amount": 1240, "image": "/img/Angelo_I_Dimayuga.jpg"},
-  { "month": "July 2026", "name": "Rita S Salvador", "amount": 14300, "image": "/img/Rita_S_Salvador.jpg" },
-  { "month": "July 2026", "name": "John Lee S Alcantara", "amount": 980, "image": "/img/John_Lee_S_Alcantara.jpg" },
-  { "month": "July 2026", "name": "Nida G Propogo", "amount": 14300, "image": "/img/Nida_G_Propogo.jpg" }
+  { "month": "August 2026", "name": "Eduardo M Banting", "amount": 12400, "image": "/img/Eduardo_M_Banting.jpg"},
+  { "month": "August 2026", "name": "Dhean Lawrence E Mauhay", "amount": 14300, "image": "/img/Dhean_Lawrence_E_Mauhay.jpg" },
+  { "month": "August 2026", "name": "John Lee S Alcantara", "amount": 980, "image": "/img/John_Lee_S_Alcantara.jpg" },
+  { "month": "August 2026", "name": "Freddie Alcantara", "amount": 14300, "image": "/img/Freddie_Alcantara.jpg" },
+  { "month": "August 2026", "name": "Roilan A Bortonel", "amount": 14300, "image": "/img/Roilan_A_Bortonel.jpg" }
 ]

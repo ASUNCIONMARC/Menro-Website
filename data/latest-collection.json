@@ -1,6 +1,7 @@
 [
-  { "date": "2026-07-01", "name": "Juan Dela Cruz", "place": "Brgy. Tala", "amount": "₱1,200" },
-  { "date": "2026-07-02", "name": "Maria Santos", "place": "Brgy. Poblacion", "amount": "₱850" },
-  { "date": "2026-07-03", "name": "Pedro Reyes", "place": "Brgy. San Jose", "amount": "₱2,000" },
-  { "date": "2026-07-04", "name": "Ana Lim", "place": "Brgy. Malaya", "amount": "₱600" }
+  { "date": "2026-09-01", "name": "Eduardo M Banting", "place": "Brgy. Tala", "amount": "₱1,200" },
+  { "date": "2026-09-02", "name": "Dhean Lawrence E Mauhay", "place": "Brgy. Poblacion", "amount": "₱850" },
+  { "date": "2026-09-03", "name": "Freddie Alcantara", "place": "Brgy. San Jose", "amount": "₱2,000" },
+  { "date": "2026-09-04", "name": "Roilan A Bartonel", "place": "Brgy. Malaya", "amount": "₱600" },
+  { "date": "2026-09-04", "name": "John Lee S Alcantara", "place": "Brgy. Malaya", "amount": "₱600" }
 ]

@@ -148,7 +148,7 @@ fetch('/data/recent-activity.json')
 
       var carousel = document.createElement('div');
       carousel.className = 'RecentActivity__Carousel';
-      carousel.setAttribute('tabindex', '0'); // TC-019 fix: makes the carousel keyboard-focusable
+      carousel.setAttribute('tabindex', '0'); 
 
       activity.images.forEach(function(src, i){
         var img = document.createElement('img');

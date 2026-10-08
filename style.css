@@ -464,7 +464,8 @@ html, body{
   height: 280px;
   border-radius: 8px;
   overflow: hidden;
-  background: #eee;
+  background: #DFE0A3 url('/img/main_logo-removebg-preview.png') no-repeat center center;
+  background-size: 65%;
   flex-shrink: 0;
   margin-left: 0;
 }
