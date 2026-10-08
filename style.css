@@ -142,7 +142,7 @@ html, body{
 
 .header .container .header__wrapper .header__nav ul{
   list-style-type: none;
-  padding-right: 80rem;
+  padding-right: 60rem;
   margin: 0px;
   overflow: hidden;
   padding-top: 2.5rem;
@@ -209,7 +209,7 @@ html, body{
 .dropdown .content{
   display: none;
   position: absolute;
-  right: 75rem;
+  right: 55rem;
   left: auto;
   background-color: #7CAA3C;
   min-width: 180px;
@@ -259,16 +259,23 @@ html, body{
 @media (max-width: 900px){
   .burger{
     display: flex;
+    margin-right: 2rem;
   }
 
   .branding{
     position: relative;
     z-index: 1001;
+    transition: opacity 0.2s ease;
   }
 
   .branding img{
     width: 60px;
     height: 60px;
+  }
+
+  .branding.is-disabled{
+    opacity: 0;
+    pointer-events: none;
   }
 
   .header__wrapper{
@@ -283,14 +290,13 @@ html, body{
   left: 0;
   width: 100%;
     background: #4E7B34;
-    max-height: none;
+    max-height: 100vh;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 100px;
-    padding-bottom: 2rem;
+    padding: 9rem 0 4rem;
     transform: translateY(-100%);
     transition: transform 0.3s ease;
     z-index: 999;
@@ -300,21 +306,34 @@ html, body{
     transform: translateY(0);
   }
 
-  .header__nav ul{
-    flex-direction: column;
-    padding: 0 1.5rem;
+  .header .container .header__wrapper .header__nav ul{
     width: 100%;
-    margin-bottom: 2rem;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .header__nav ul li{
+  .header__nav li{
+    float: none;
     width: 100%;
-    padding: 0.75rem 0;
+    padding: 0;
     text-align: center;
+  }
+
+  .header__nav a{
+    color: #fff;
+    font-size: 1.4rem;
+    font: 700;
+    padding: 1.6rem 0;
   }
 
   .dropdown{
     width: 100%;
+    padding-top: 0;
+    display: block;
     text-align: center;
   }
 
@@ -325,13 +344,18 @@ html, body{
   .dropdown .content{
     display: block;
     position: static;
+    min-width: 0;
     box-shadow: none;
     background: transparent;
   }
 
   .dropdown .content a{
+    color:#fff;
     padding-left: 0;
     text-align: center;
+  }
+  .dropdown .content a:hover{
+    color: #000;
   }
 }
 
